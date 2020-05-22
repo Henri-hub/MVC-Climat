@@ -1,0 +1,18 @@
+<section class="title-degat">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>{{conseq.title}}</h1>
+                <img src={{conseq.image}} alt="">
+                <p>{{{conseq.content}}}</p>
+                <p>Publié par {{conseq.author}}, le {{moment createDate format="DD-MM-YY"}}</p>
+                {{#if user}}
+                <button class="btn btn-success"><a href="/consequence/edit/{{conseq._id}}">Modifier</a></button>
+                <form action="/consequences/{{conseq._id}}/?_method=DELETE" method="post">
+                    <button class="btn btn-danger">Supprimer</button>
+                </form>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

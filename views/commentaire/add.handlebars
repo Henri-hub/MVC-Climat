@@ -1,0 +1,23 @@
+<section class="conseq-add">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <form  action="/commentaires/post" method="POST" enctype="multipart/form-data">
+                  <div class="form-group">
+                      <label>Auteur</label>
+                      <input class="form-control" type="text" name="author">
+                  </div>
+                  <div class="form-group">
+                      <label>Contenu</label>
+                      <textarea class="form-control" rows="5" name="content"></textarea>
+                      <script>
+                        CKEDITOR.replace('content');
+                      </script>
+                  </div>
+                  <button type="submit" class="btn btn-success">Enregistrer</button>
+                  <button type="submit" class="btn btn-success">Annuler</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>

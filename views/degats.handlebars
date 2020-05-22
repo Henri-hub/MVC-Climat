@@ -1,0 +1,68 @@
+<section class="henri">
+  <div class="container">
+
+    {{#each posts}}
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/consequences/{{_id}}">
+          <h2>{{title}}</h2>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{image}}" alt="Placeholder image" class="taille">
+      </div>
+      <div class="col-md-6">
+        <p class="contenu">{{{content}}}<small>Publier par {{author}}, le {{moment createDate format='DD-MM-YY, HH:mm:ss'}}</small></p>
+      </div>
+       
+    </div>
+    {{/each}}
+    
+  </div>
+</section>
+<footer class="foot">
+  <div class="container">
+    <div class="row">
+      <div class="col div">
+        <h4>La liste des besoins</h4>
+        <ul>
+          <a href="/">
+            <li>Plan du site</li>
+          </a>
+          <a href="">
+            <li>Notre charte</li>
+          </a>
+          <a href="">
+            <li>Publicité</li>
+          </a>
+          <a href="">
+            <li>Recrutement</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4>La liste des demandes</h4>
+        <ul>
+          <a href="">
+            <li>Panel des lecteurs</li>
+          </a>
+          <a href="/commentaires">
+            <li>Charte des commentaires</li>
+          </a>
+          <a href="">
+            <li>Protection des données personnelles</li>
+          </a>
+          <a href="">
+            <li>Gestion des cookies</li>
+          </a>
+        </ul>
+      </div>
+      <div class="col">
+        <a href="/"><img src="ressources/images/ecolo.jpg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>

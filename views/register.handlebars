@@ -1,0 +1,39 @@
+<section class="register">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="content">
+                    <ol type="1">
+                        {{#each errors}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
+                <form action="/user/register" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="name" class="form-control" name="name" value={{data.name}}>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" aria-describedby="emailHelp" name="email"
+                            value={{data.email}}>
+                        <small class="form-text text-muted">Nous ne partagerons jamais votre e-mail
+                            avec quelqu'un d'autre.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" placeholder="" name="password"
+                            value={{data.password}}>
+                        <span><i class="fas fa-lock"></i></span>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-success">Enregistrer</button>
+                        <button type="submit" class="btn btn-success">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

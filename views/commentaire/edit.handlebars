@@ -1,0 +1,20 @@
+
+<section class="conseq-edit">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <form action="/commentaire/edit/{{conseq._id}}?_method=PUT"method="POST" enctype="multipart/form-data">
+                  <div class="form-group">
+                      <label>Contenu</label>
+                      <textarea class="form-control" rows="5" name="content">{{conseq.content}}</textarea>
+                      <script>
+                        CKEDITOR.replace('content');
+                      </script>
+                  </div>
+                  <button type="submit" class="btn btn-success">Enregistrer</button>
+                  <button type="submit" class="btn btn-success">Annuler</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
